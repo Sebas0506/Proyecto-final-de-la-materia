@@ -1,0 +1,147 @@
+body
+    {
+        font-family: "constantia", Helvetica, sans-serif;
+        font-weight: bold;
+        color: red;   
+    }
+
+Form
+    {
+        width: 310px;
+		height: 300px;
+        box-sizing: border-box;
+        border-radius: 35px 0px 35px 0px;
+    }
+
+fieldset
+    {
+        width: 280px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-left: 12px;
+        border: 3px solid red;
+        color: red; 
+    }
+
+.Caja
+    {
+        width: 100%;
+        margin-bottom: 5px;
+        border: double;
+        box-sizing: border-box;
+        background-color: rgb(223, 153, 3);
+        color: white;
+        font-family: "constantia", Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+.Caja:disabled
+    {
+        width: 100%;
+        margin-bottom: 5px;
+        border: double;
+        box-sizing: border-box;
+        background-color: red;
+        color: white;
+        font-family: "constantia", Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+.Caja:focus
+    {
+        background-color: yellow;
+        color: black ;
+        border: 4px solid goldenrod;
+    }
+
+.button
+    {   
+        padding: 10px;
+        color: white;
+        width: 120px;
+        background-color: rgb(189, 61, 61);
+        border-radius: 6px;
+        border: 3px solid rgb(223, 153, 3);
+        font-family: "constantia", Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        margin: auto;
+        cursor: pointer;
+    }
+
+.button:hover
+    {
+        background-color: red;
+        border: 3px solid red;
+        box-shadow: 0 0 10px 0 red inset, 0 0 10px 4px red;
+    }
+
+.Registro
+    {
+        flex-wrap: wrap;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-items: center;
+    } 
+
+.Resultados
+    {
+        width: 100%;
+        height: 300px;
+		padding: 5px;
+        float: left;
+        clear: both;
+    }
+
+.Seleccion
+    {
+        width: 250px;
+        height: 300px;
+		padding: 5px;
+        float: left;
+        clear: both;
+    }
+
+:root
+    {
+        --Borde: red;
+        --Fondo: red;
+        --Base: rgb(204, 94, 94);
+
+        --Bordehover: rgb(223, 153, 3);
+        --Fondohover: rgb(223, 153, 3);
+        --Basehover: rgb(255, 166, 0);
+    }
+
+select 
+    {
+        appearance: none;
+        cursor: pointer;
+        font-family: "constantia", Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: red;
+        border: 2px solid red;
+        line-height: 1;
+        padding: 8px 35px;
+        border-radius: 4px;
+        background-color:white;
+        background-image:   linear-gradient(var(--Borde/*Bor*/), var(--Borde/*Bor*/)),
+                            linear-gradient(-135deg, transparent 50%, var(--Base/*Izq*/) 50%),
+                            linear-gradient(-225deg, transparent 50%, var(--Base/*Der*/) 50%),
+                            linear-gradient(var(--Base/*Arr*/) 42%, var(--Fondo/*Fon*/) 42%);
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+        background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+        background-position: right 20px center, right bottom, right bottom, right bottom;   
+    }
+
+select:hover
+    {
+        background-image:   linear-gradient(var(--Bordehover), var(--Bordehover)),
+                            linear-gradient(-135deg, transparent 50%, var(--Basehover) 50%),
+                            linear-gradient(-225deg, transparent 50%, var(--Basehover) 50%),
+                            linear-gradient(var(--Basehover) 42%, var(--Fondohover) 42%);
+    }
